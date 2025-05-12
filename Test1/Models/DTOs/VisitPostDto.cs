@@ -4,6 +4,6 @@ public class VisitPostDto
 {
     public int VisitId { get; set; }
     public int ClientId { get; set; }
-    public string MechanicLicenceNumber { get; set; }
-    public List<VisitServiceDto> Services { get; set; }
+    public required string MechanicLicenceNumber { get; set; }
+    public required List<VisitServiceDto> Services { get; set; }
 }

@@ -22,7 +22,7 @@ namespace Test1.Controllers
             }
             catch (VisitDoesNotExistException e)
             {
-                return BadRequest(e.Message);
+                return NotFound(e.Message);
             }
 
             return Ok(result);
@@ -37,15 +37,15 @@ namespace Test1.Controllers
             }
             catch (ClientDoesNotExistException e)
             {
-                return BadRequest(e.Message);
+                return NotFound(e.Message);
             }
             catch (MechanicDoesNotExistException e)
             {
-                return BadRequest(e.Message);
+                return NotFound(e.Message);
             }
             catch (ServiceDoesNotExistException e)
             {
-                return BadRequest(e.Message);
+                return NotFound(e.Message);
             }
             catch (VisitAlreadyExistsException e)
             {

@@ -1,6 +1,5 @@
 ﻿using System.Data.Common;
 using Microsoft.Data.SqlClient;
-using Microsoft.JSInterop.Infrastructure;
 using Template_2.Exceptions;
 using Template_2.Models.DTOs;
 
@@ -86,7 +85,7 @@ public class DbService(IConfiguration configuration) : IDbService
             var clientCommand = new SqlCommand("SELECT first_name, last_name, date_of_birth FROM Client JOIN Visit ON Client.client_id = Visit.client_id WHERE visit_id = @visitId", connection);
             clientCommand.Parameters.AddWithValue("@visitId", id);
 
-            var client = new ClientDto();
+            ClientDto client = new ClientDto();
             
             using (var reader = await clientCommand.ExecuteReaderAsync())
             {
