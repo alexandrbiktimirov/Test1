@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/Test1/SQL/create1B.sql" dialect="TSQL" />
-    <file url="file://$PROJECT_DIR$/Test1/SQL/drop1B.sql" dialect="TSQL" />
-  </component>
-</project>
